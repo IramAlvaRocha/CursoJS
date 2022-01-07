@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fudamentos JavaScript</title>
+</head>
+
+<body>
+  <h1>Fundamentos JavaScript</h1>
+
+  <script>
+    /*
+    var hola = "Hola Mundo";  //Con var es variable global, se guardan en el scope global del documento _window_
+    let hello = "Hello word";  //Con  let es para ambito de bloque
+    console.log(hola);
+    console.log(hello);
+    console.log(window); //Muestra las variables globales y lo que engloba el DOM
+    console.log(window.hello);
+    console.log(window.hola);
+  */
+
+
+    //AMBITO DE BLOQUE 
+
+    /*   Declaración con VAR 
+
+      console.log("+++++ Declaracion con VAR +++++");
+      var musica = "Rock"
+      console.log("Variable musica antes del bloque", musica);
+      //Esto es un bloque
+      {
+        var musica = "Pop"
+        console.log("Variable musica dentro del bloque ", musica);
+      }
+      console.log("Variable música despúes del bloque", musica);
+    
+    */
+
+    /*     Declaración con LET    
+
+      console.log("+++++ Declaracion con LET +++++");
+      let musica2 = "Rock"
+      console.log("Variable musica antes del bloque", musica2);
+      //Esto es un bloque
+      {
+        let musica2 = "Pop"
+        console.log("Variable musica dentro del bloque ", musica2);
+      }
+      console.log("Variable música despúes del bloque", musica2)
+    */
+
+    /*++++++CONSTANTES+++++
+       const PI = 3.1416;
+       console.log(PI);
+ 
+       const objeto = {
+         nombre: "Iram",
+         edad: 22
+       }
+       const colores = ["Blanco", "Negro", "Naranja"];
+ 
+       console.log(objeto);
+       console.log(colores)
+ 
+       objeto.correo = "iram@gmail.com";
+       colores.push("Rosa");
+       console.log(objeto);
+       console.log(colores)
+     */
+
+    /*
+     //Cadenas de texto aka Strings
+     let nombre = "Iram";
+     let apellido = "Alvarez";
+     let saludo = new String("Hola clase");
+     let lorem = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, tempora tenetur. Officia recusandae itaque unde alias, ullam necessitatibus, non ut est vel vitae dolore quod sint molestias dolorum temporibus rem?                ";
+
+     console.log(nombre, apellido, saludo)
+
+     console.log(
+       nombre.length,
+       apellido.length,
+       saludo.length,
+       nombre.toUpperCase(),
+       apellido.toLowerCase(),
+       lorem.includes("iram"),
+       lorem.trim(),
+       lorem.split(",")
+     );
+   */
+
+    //CONCATENACIÓN E INTERPOLACIÓN
+    /*
+    let nombre = "Vanessa";
+    let apellido = "Rocha"
+
+    //Concatenación
+    let saludo = "Mi nombre es:" + " " + nombre + " " + apellido + ".";
+    console.log(saludo);
+
+    //Interpolacion de variables
+    //Template String
+    let saludo2 = `Hola mi nombre es ${nombre} ${apellido}.`
+    console.log(saludo2);
+
+    let ul = "<u><li>Primavera</li><li>Verano</li><li>Otoño</li><li>Invierno</li></ul>";
+
+    console.log(ul);
+
+    let ul2 = `
+    <ul>
+     <li>Primavera</li>
+     <li>Verano</li>
+     <li>Otoño</li>
+     <li>Invierno</li>
+    </ul>
+    `
+    console.log(ul2)
+
+    let ul3 = "<ul>";
+    ul3 += "<li>Primavera</li>";
+    ul3 += "<li>Verano</li>";
+    ul3 += "<li>Otoño</li>";
+    ul3 += "<li>Invierno</li>";
+    ul3 += "</ul>";
+
+    console.log(ul3);
+    */
+
+    /*
+        //NÚMEROS
+    
+        let a = 2;
+        let b = new Number(4);
+        let c = 7.19;
+        let d = "5.6";
+    
+        console.log(a, b);
+        console.log(c.toFixed(4));
+        console.log(parseInt(c));
+        console.log(parseFloat(c));
+        console.log(typeof c);
+        console.log(a + b);
+        console.log(c + parseFloat(d));
+    */
+
+    /*
+        //Booleanos
+        let verdadero = true;
+        let falso = false;
+    
+        console.log(verdadero, typeof (verdadero), falso, typeof (falso));
+    
+        console.log(Boolean(0));
+        console.log(Boolean(-3));
+        console.log(Boolean(""));
+        console.log(Boolean(" "))
+    
+    */
+
+
+    /*
+    //Null, Undefined  y NaN
+    let indefinida;
+    console.log(indefinida);
+    let nulo = null;
+
+    //NaN Not an Number
+    let noEsUnNombre = "hola" * 4;
+    console.log(noEsUnNombre)
+*/
+
+
+
+    //FUNCIONES
+    function estoEsUnaFuncion() {
+      console.log("Uno");
+      console.log("Dos");
+      console.log("Tres");
+    }
+
+    /*
+    //FUNCIONES EN JAVASCRIPT
+
+    // //Invocación de funciones
+    // estoEsUnaFuncion();
+    function unaFuncionQueDevuelveUnValor() {
+      console.log("Uno");
+      console.log("Dos");
+      console.log("Tres");
+      return "La función a retornado una cadena de texto"
+    }
+
+    // let valorDeFuncion = unaFuncionQueDevuelveUnValor();
+    // console.log(valorDeFuncion)
+
+    function saludar(nombre = "Desconocido", edad = 0) {
+      console.log(`Hola mi nombre es ${nombre}, tengo ${edad} años.`)
+    }
+    saludar("Paola", 15);
+    saludar();
+
+
+    funcionDeclarada();
+    //Funciones declaradas vs Funciones expresadas
+    function funcionDeclarada() {
+      console.log("Esto es una función declarada, puede invocarse en cualquier parte de nuestro código incluso antes de que la función sea declarada.")
+    }
+    funcionDeclarada();
+
+    //Funcion anonima
+
+    const funcionExpresada = function () {
+      console.log("Esto es una funcion expresada, es decir una funcion que se le a asignado como valor a una variable, si invocamos esta función antes de su definición JS nos dirá?...");
+    }
+    funcionExpresada();
+
+    */
+
+
+    /*
+        //ARREGLOS EN JAVASCRIPT
+        const a = [];
+        const b = [1, true, "Hola", ["A", "E", "I", "O", "U"]];
+        console.log(b);
+        console.log(b.length)
+        console.log(b[3])
+        console.log(b[3][2]);
+    
+        const c = Array.of("a", "b", "c", 7, 8, 9);
+        // console.log(c);
+    
+        const d = Array(100).fill(false);
+        // console.log(d);
+    
+        const colores = ["Rojo", "Verde", "Azul"];
+        console.log(colores);
+        colores.push("Gris");
+        console.log(colores);
+    
+        colores.pop();
+        console.log(colores);
+    
+        colores.forEach(function (element, index) {
+          console.log(`<li id="${index}">${element}</li>`);
+        });
+        */
+
+
+    /*
+//OBJETOS EN JAVASCRIPT
+let a = new String("Hola");
+// console.log(a)
+
+//Los objetos dentro de un objeto a las variables se le van a llamar atributis/propiedades y a las funciones se le llamarán métodos
+
+const iram = {
+  nombre: "Iram",
+  apellido: "Alvarez",
+  edad: 22,
+  pasatiempos: [
+    "Aprender nuevas técnologias", "ver vídeos"],
+  soltero: true,
+  contacto: {
+    email: "iram.alvarezrch@gmail.com",
+    movil: "5218126661567",
+    twitter: "@iram_rochaa"
+  },
+  saludar: function saludar() {
+    console.log("Hola")
+  },
+  decirMiNombre: function () {
+    console.log(`Hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} años `)
+  }
+}
+
+console.log(Object.keys(iram));
+console.log(Object.values(iram));
+console.log(iram.hasOwnProperty("nombre"))
+console.log(iram.hasOwnProperty("nacimiento"));
+*/
+
+    /*
+        //Operador ternario
+        const edad = 17;
+        let eresMayor = (edad >= 18) ? "Eres mayor de edad" : "Eres menor de edad"
+        console.log(eresMayor)
+        //switch-case
+    
+        let key = 9;
+        switch (key) {
+          case 0:
+            console.log("Domingo")
+            break;
+          case 1:
+            console.log("Lunes")
+            break;
+          default:
+            console.log("El día no existe")
+            break;
+        }
+    */
+
+    /*
+        //Loops
+        let contador = 0;
+        while (contador < 10) {
+          console.log(contador)
+          contador++;
+        }
+    
+        let c = 0;
+        do {
+          console.log("Hola mundo!")
+          c++;
+        } while (c < 10);
+    */
+
+    /*
+    //MANEJO DE ERRORES
+    try {
+      console.log("En el try se agrega el código a ejecutar/evaluar");
+      noExiste;
+      console.log("Segundo mensaje en el try")
+    } catch (error) {
+      console.log("Catch, captura cualquier error surguido en la ejecución");
+      console.log(error);
+    } finally {
+      console.log("Se ejecutará siempre al final de un bloque try-catch");
+    }
+
+    try {
+      let numero = "f";
+      if (isNaN(numero)) {
+        throw new Error("El caracter introducido no es un número");
+      }
+      console.log(numero * numero)
+    } catch (error) {
+      console.log(`Se produjo el siguiente error: ${error}`)
+    }
+
+*/
+
+    /*
+        //DESTRUCTURACIÓN
+    
+        // Sin destructuracion
+        const numeros = [1, 2, 3];
+        let
+          uno = numeros[0],
+          dos = numeros[1],
+          tres = numeros[2];
+        console.log(uno, dos, tres);
+    
+        // Con destructuración
+        const [one, two, three] = numeros;
+        console.log(one, two, three)
+    
+    
+        const persona = {
+          nombre: "Iram",
+          apellido: "Alvarez",
+          edad: 22
+        }
+    
+        const { nombre, edad, apellido } = persona;
+        console.log(nombre, apellido, edad);
+        */
+
+    /*
+//OBJETOS LITERALES
+
+let nombre = "iram";
+let edad = 22;
+
+const perro = {
+  nombre: nombre,
+  edad: edad,
+  ladrar: function () {
+    console.log("Woof woof");
+  }
+}
+
+console.log(perro.ladrar())
+
+const dog = {
+  nombre,
+  edad,
+  raza: "Callejero",
+  ladrar() {
+    console.log("Woof woof woof");
+  }
+}
+
+console.log(dog.ladrar())
+*/
+
+    /*
+        //PARAMETROS REST &  OPERADOR SPREAD
+        function sumar(a, b, ...c) {
+          let resultado = a + b;
+    
+          c.forEach(function (n) {
+            resultado += n;
+          })
+          return resultado;
+        }
+        console.log(sumar(1, 2, 4, 8, 9))
+    
+    
+        const arr1 = [1, 2, 3, 4, 5];
+        const arr2 = [6, 7, 8, 9, 0];
+    
+        console.log(arr1, arr2);
+    
+        const arr3 = [...arr1, ...arr2];
+    
+        console.log(arr3);
+    */
+
+    // ARROW FUNCTIONS
+
+    // saludo = () => {      console.log("Hola");     }
+    // saludo();
+
+
+    /*   const saludar = (nombre) => console.log(`Hola ${nombre}`);
+  
+      saludar("Iram");
+  
+      const sumar = function (a, b) {
+        return a + b;
+      }
+      console.log(sumar(4, 4)) */
+
+    const sumar = (a, b) => a + b;
+    console.log(sumar(8, 8));
+
+    const funcionDeVariasLineas = () => {
+      console.log("Uno")
+      console.log("Dos")
+      console.log("Tres")
+    }
+
+    console.log(funcionDeVariasLineas())
+
+    const numeros = [1, 2, 3, 4, 5];
+    numeros.forEach(function (element, index) {
+      console.log(` ${element} se encuentra en la posición ${index}`);
+    })
+
+    numeros.forEach((el, index) => console.log(` ${el} se encuentra en la posición ${index}`));
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

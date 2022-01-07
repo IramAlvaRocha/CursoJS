@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Básicos ejercicios</title>
+</head>
+
+<body>
+  <h1>Ejercicios de programación en Javascript</h1>
+  <script>
+
+    /*Funcion que cuente el numero de caracteres de una cadena de texto */
+
+    // function contarCaracteres(cadena = "") {
+    //   if (!cadena) {
+    //     console.warn("No ingresaste ningun texto")
+    //   } else {
+    //     console.info(`La cadena "${cadena}" tiene ${cadena.length} caracteres`);
+    //   }
+    // }
+
+    /*   const contarCaracteres = (cadena = "") =>
+         (!cadena)
+           ? console.warn("No ingresaste ningun texto")
+           : console.info(`La cadena "${cadena}" tiene ${cadena.length} caracteres`);
+   
+       contarCaracteres("Hola mundo ternario");
+   */
+
+
+
+    /*Funcion que te devuelva el texto recortado según el número de caracteres indicado*/
+
+    // const recortarTexto = (cadena = "", longitud = undefined) =>
+    //   (!cadena)
+    //     ? console.warn("No ingresaste el texto")
+    //     : (longitud === undefined)
+    //       ? console.warn("No ingresaste la longitud de caracteres a recortar")
+    //       : console.info(cadena.slice(0, longitud))
+    // recortarTexto("Hola mundo", 4)
+
+    /*Función que dada una string te devuelva un Array de texto separado por cierto caracter */
+
+    // const cadenaAArreglo = (cadena = "", separador = undefined) =>
+    //   (!cadena)
+    //     ? console.warn("No ingresaste una cadena de texto")
+    //     : (separador === undefined)
+    //       ? console.warn("No ingresaste el caracter separador")
+    //       : console.info(cadena.split(separador))
+    // cadenaAArreglo("Hola mi nombre es Iram", " ")
+
+    /*Funcion que repita un texto n veces */
+
+    // const repetirTexto = (texto = "", veces = undefined) => {
+    //   if (!texto) return console.warn("No ingresaste un texto");
+
+    //   if (veces === undefined) return console.warn("No ingresaste el númeor de veces a repetir el texto");
+
+    //   if (veces === 0) return console.error("El número de veces no puede ser cero")
+
+    //   if (Math.sign(veces) === -1) return console.error("El número de veces no puede ser negativo")
+
+    //   for (let i = 1; i <= veces; i++) {
+    //     console.info(`${texto}, ${i}`)
+    //   }
+    // }
+
+    // repetirTexto("Hola mundo", 5)
+    // repetirTexto("Hola mundo", 0)
+    // repetirTexto("Hola mundo", -5)
+    // repetirTexto("", -5)
+
+    /*Función que invierte las palabas de una cadena de texto*/
+    // const invertirCadena = (cadena = "") =>
+    //   (!cadena)
+    //     ? console.warn("No ingresaste una cadena de texto")
+    //     : console.info(cadena.split("").reverse().join(""))
+
+    // invertirCadena("Javascript es un lenguaje de programación");
+
+
+    /*Funcion para contar el número de veces que se repite una palabra en un texto*/
+
+    // const textoEnCadena = (cadena = "", texto = "") => {
+    //   if (!cadena) return console.warn("No ingresaste una cadena de texto")
+
+    //   if (!texto) return console.warn("No ingresaste la palabra a buscar")
+
+    //   let i = 0, contador = 0;
+    //   while (i !== -1) {
+    //     i = cadena.indexOf(texto, i)
+    //     if (i !== -1) {
+    //       i++;
+    //       contador++;
+    //     }
+    //   }
+
+    //   return console.info(`La palabra ${texto} se repite ${contador} veces en la frase [${cadena}]`)
+    // }
+
+    // textoEnCadena("Hola mundo mundo jaja como estas no digas eso mi amor", "mundo")
+    // textoEnCadena("", "eso")
+
+
+
+
+    /*Función que valide si una palabra o frase dada, es un palindromo*/
+
+    // const palindromo = (palabra = "") => {
+    //   if (!palabra) return console.warn("No ingresaste una palabra o frase");
+
+    //   palabra = palabra.toLowerCase();
+    //   let alReves = palabra.split("").reverse().join("");
+
+    //   return (palabra === alReves)
+    //     ? console.info(`Si es palindromo, Palabra original ${palabra}, Palabra al revés ${alReves}`)
+    //     : console.info(`No es palindromo, Palabra original ${palabra}, Palabra al revés ${alReves}`);
+    // }
+    // palindromo();
+    // palindromo("Hola mundo");
+    // palindromo("SalAs");
+
+
+    /*Funcion que elimine cierto patron de caracteres de un texto dado*/
+
+    // const eliminarCaracteres = (texto = "", patron = "") =>
+    //   (!texto)
+    //     ? console.warn("No ingresaste un texto")
+    //     : (!patron)
+    //       ? console.warn("No ingresaste un patrón a eliminar")
+    //       : console.info(texto.replace(new RegExp(patron, "ig"), ""));
+
+    // eliminarCaracteres("xyz1, xyz2", "xyz")
+
+
+    /*Funcion que de un numero aleatorio entre 501 y 600*/
+
+    // const aleatorio = () => console.info(Math.round(Math.random() * 100 + 500))
+    // aleatorio();
+
+
+    /*Funcion que reciba un numero y evalue si es capicula o no (Que se lee igual en un sentido u otro)*/
+
+    // const capicua = (numero = 0) => {
+    //   if (!numero) return console.warn("No ingresaste un numero");
+
+    //   if (typeof numero !== "number") return console.error(`El valor de "${numero}" ingresado no es número`)
+
+    //   numero = numero.toString()
+    //   let alReves = numero.split("").reverse().join("")
+
+    //   return ((numero) === alReves
+    //     ? console.info(`Sí es capicua, Número original ${numero}, Número al revés ${alReves} `)
+    //     : console.info(`No es capicua, Número original ${numero}, Número al revés ${alReves}`)
+    //   )
+    // }
+
+    // capicua();
+    // capicua("Hola");
+    // capicua(203);
+    // capicua(202);
+
+
+    /*Funcion que calcule el factorial (el factorial de un entero pasitivo n, se define como el producto de todos los numeros positivos desde el 1 hasta el numero n )*/
+
+    const factorial = (numero = undefined) => {
+      if (numero === undefined) return console.error("No ingresaste un número");
+
+      if (typeof numero !== "number") return console.error(`El valor de "${numero}" ingresado no es un número`)
+
+      if (numero === 0) return console.error("El numero no puede ser cero");
+
+      if (numero === 0) return console.error("El numero no puede ser cero");
+
+      if (Math.sign(numero) === -1) return console.error("El número no puede ser negativo");
+
+      let factorial = 1;
+
+      for (let i = numero; i > 1; i--) {
+        factorial *= i;
+      }
+
+      return console.log(`El factorial de "${numero}" es: ${factorial}`)
+    }
+
+    factorial();
+    factorial("vsd");
+    factorial(-12);
+    factorial(0);
+    factorial(4);
+
+  </script>
+</body>
+
+</html>

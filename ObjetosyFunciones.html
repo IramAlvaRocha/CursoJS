@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objetos y funciones</title>
+</head>
+
+<body>
+  <h1 style="text-align: center; background-color: chocolate; padding: 1rem; border-radius: 30px; color: #151515;">
+    Objetos y funciones
+  </h1>
+
+
+  <script>
+
+
+    /*
+    
+    //+++++++OBJETO CONSOLE+++++++
+    console.log("Un registro de lo que a pasado en nuestra aplicación");
+        console.error("Esto es un error");
+        console.warn("Esto es un warning");
+        console.info("Esto es un mensaje informativo");
+    
+        let name = "Iram";
+        let lastName = "Alvarez";
+        let age = 22;
+    
+        console.log(name, lastName, age);
+        console.log(`Hola mi nombre es ${name} ${lastName} tengo ${age}`);
+        // console.log(document)
+        console.dir(document);
+        console.clear();
+        console.group("Los cursos de mircha en Youtube")
+        console.log("Curso de JavaScript")
+        console.log("Curso de Node.js")
+        console.log("Curso de PHP")
+        console.groupEnd()
+        console.group("Los cursos de mircha en Youtube")
+        console.log("Curso de JavaScript")
+        console.log("Curso de Node.js")
+        console.log("Curso de PHP")
+        console.groupEnd()
+    
+    
+        console.clear()
+        console.log(console)
+        console.table(Object.entries(console).sort())
+    
+        const numeros = [1, 2, 3, 4, 5],
+          vocales = ["a", "e", "i", "o", "u"];
+        console.table(numeros, vocales)
+        console.table(vocales);
+    
+        const perro = {
+          nombre: "Pistache",
+          raza: "Gato",
+          Color: "B/N"
+        }
+    
+        console.table(perro)
+        console.clear()
+    
+        console.time("Cuanto tiempo tarda mi codigo");
+        const arreglo = Array(100);
+    
+        for (let i = 0; i < arreglo.length; i++) {
+          arreglo[i] = i;
+        }
+        console.log(arreglo)
+        console.timeEnd("Cuanto tiempo tarda mi codigo");
+    
+        console.clear()
+        for (let i = 0; i < arreglo.length; i++) {
+          console.count("Código for")
+          console.log(i)
+        }
+    
+        console.clear()
+        let x = 3, y = 4, prueba = "Se esperaba que X sea mejor que Y";
+        console.assert(x < y, { x, y, prueba }) */
+
+    /*     
+    //+++++++++++Objeto DATE+++++++++++
+    console.log(Date())
+    
+        let fecha = new Date();
+        console.log(fecha)
+        //Día del mes
+        console.log(fecha.getDate())
+        //Representa el dia de la semana Domingo 0, Lunes 1, Martes 2 ...
+        console.log(fecha.getDay())
+        //Representa el mes Enero 0, Febrero 1, Marzo 2 ...
+        console.log(fecha.getMonth())
+        //Representa el año
+        console.log(fecha.getFullYear())
+        //Representa la hora
+        console.log(fecha.getHours());
+        //Representa los minutos
+        console.log(fecha.getMinutes());
+        //Representa los segundos
+        console.log(fecha.getSeconds());
+        //Representa los milisegundos
+        console.log(fecha.getMilliseconds());
+        //Representa los milisegundos
+        console.log(fecha.toString());
+        //Fecha a String
+        console.log(fecha.toDateString());
+        //Fecha Local a String
+        console.log(fecha.toLocaleString());
+        //Diferencia en minutos de Londres Meridiano de GreenWitch
+        console.log(fecha.getTimezoneOffset());
+        console.log(Date.now());
+    
+        let cumpleIram = new Date(1999, 2, 6);
+        console.log(cumpleIram) */
+
+    /*   
+  //+++++++++++ Objeto MATH +++++++++++
+  console.log(Math.PI);
+  console.log(Math.abs(-7.8))
+  console.log(Math.ceil(7.8)) //Redonde un numero al cielo
+  console.log(Math.floor(5.7)) //Redondea al suelo
+  console.log(Math.round(7.4)) //Redondea al más cercano
+  console.log(Math.sqrt(81)) //Raices cuadradas
+  console.log(Math.pow(2, 5)) //Potencias
+  console.log(Math.sign(-2)) //Si es negativo envia -1, 0=0, positivo = 1
+  console.log(Math.random()) //Da un numero aleatorio entre cero y uno
+  console.log(Math.round(Math.random() * 1000)) //Da un numero aleatorio entre cero y el número que asignemos
+*/
+    /* 
+        //  Operadores corto circuito
+        // *Corto circuito con OR: cuando el valor de la izquierda en la expresión  siempre pueda validar a true, es el valor que cargará por defecto
+        //*Corotocircuito AND: cuando el valor de la izquierda en la expresión siempre pueda validar a false, es el valor que se cargará por defecto
+    
+        function saludar(nombre) {
+          nombre = nombre || "Desconocido"
+          console.log(`Hola ${nombre}`)
+        }
+    
+    
+        saludar("iram");
+        console.log("cadena" || "Valor de la derecha");
+        console.log("12" || "Valor de la derecha");
+        console.log(true || "Valor de la derecha");
+        console.log([] || "Valor de la derecha");
+        console.log(false || "Valor de la derecha");
+        console.log(null || "Valor de la derecha");
+        console.log(undefined || "Valor de la derecha");
+        console.log(-2 || "Valor de la derecha");
+        console.log(0 || "Valor de la derecha");
+        console.log("cadena" && "Valor de la derecha");
+        console.log("12" && "Valor de la derecha");
+        console.log(true && "Valor de la derecha");
+        console.log([] && "Valor de la derecha");
+        console.log(false && "Valor de la derecha");
+        console.log(null && "Valor de la derecha");
+        console.log(undefined && "Valor de la derecha");
+        console.log(-2 && "Valor de la derecha");
+        console.log(0 && "Valor de la derecha");
+     */
+    /* 
+        //++++++++ ALERTS, CONFIRM, PROMPTS ++++++++
+    
+        // window.alert("Hola eso es una alerta")
+        // window.confirm("Hola eso es una alerta")
+        // window.prompt("Hola esto es un prompt donde podemos ingresar un valor")
+    
+        let alerta = alert("Hola eso es una alerta")
+        let confirmacion = confirm("Hola eso es una alerta")
+        let aviso = prompt("Hola esto es un prompt donde podemos ingresar un valor")
+    
+    
+        console.log(alerta)
+        console.log(confirmacion)
+        console.log(aviso)
+     */
+    /* 
+        //Expresiones regulares para validar INE, RFC, Correos, etc.
+    
+        let cadena = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet illo commodi qui vitae velit voluptatem voluptate, 9 dolore doloremque rerum? Dolorem sapiente dignissimos velit dolor corrupti obcaecati ut voluptates, harum earum!"
+        // let expReg = new RegExp("lorem", "ig")
+        // console.log(expReg.test(cadena))
+        // console.log(expReg.exec(cadena))
+    
+        let expReg2 = /{0-9}/g;
+        console.log(expReg2.test(cadena))
+        console.log(expReg2.exec(cadena))
+     */
+/* 
+    //++++++FUNCIONES ANÓNIMAS AUTOEJECUTABLES++++++
+
+    (function () {
+      console.log("Mi primer IIFE")
+    })();
+
+    (function (d, w, c) {
+      console.log("Mi segunda IIFE")
+      console.log(d);
+      console.log(w);
+      c.log("Esto es un console log")
+    })(document, window, console);
+ */
+
+ 
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>
